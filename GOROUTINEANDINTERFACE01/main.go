@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GOLANG101/JIEKOU/search"
+	"GOLANG101/GOROUTINEANDINTERFACE01/search"
 	"log"
 	"os"
 )
