@@ -31,3 +31,7 @@ handler接口，同一个url，使用多个处理器处理
 
 面试题目，对go的语法有用处，这个是原文链接，有些格式不对，我调整了
 https://gist.github.com/stamhes/6b82a695bfac83b7448b4ca3dfa380f3
+
+添加第二个面试题目的链接
+
+https://github.com/lifei6671/interview-go/blob/master/question/q014.md
