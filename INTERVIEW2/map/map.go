@@ -10,7 +10,7 @@ type Student struct {
 
 func main() {
 	kv := map[string]Student{"menglu": {Age: 21}}
-	kv["menglu"].Age = 22
+	//kv["menglu"].Age = 22
 	student, exist := kv["menglu"]
 	fmt.Println(student, exist)
 	s := []Student{{Age: 21}}
