@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 //我升级一下相关的接口
 
@@ -16,9 +19,21 @@ func (b *b) print() {
 }
 func test(a a) {
 	i := b{a}
+	of := reflect.TypeOf(i)
+	valueOf := reflect.ValueOf(i)
+	name := reflect.Indirect(valueOf).Type().Name()
+	fmt.Println(of)
+	fmt.Println(valueOf)
+	fmt.Println(name)
 	i.print()
 }
 func test2(a a) {
+	of := reflect.TypeOf(a)
+	valueOf := reflect.ValueOf(a)
+	name := reflect.Indirect(valueOf).Type().Name()
+	fmt.Println(of)
+	fmt.Println(valueOf)
+	fmt.Println(name)
 	a.print()
 }
 
