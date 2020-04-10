@@ -21,6 +21,8 @@ func main() {
 	server := http.Server{
 		Addr: "127.0.0.1:8080",
 	}
-	http.HandlerFunc("").
-		server.ListenAndServe()
+	//所以这么一来的话，hello就是那个h，真实的处理器其实是return的
+	//匿名函数，这个匿名函数包着真正的hello逻辑处理器
+	http.HandleFunc("/hello", log(hello))
+	server.ListenAndServe()
 }
