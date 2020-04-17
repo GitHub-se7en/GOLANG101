@@ -47,6 +47,7 @@ func serveConn(conn net.Conn) {
 	for true {
 		//这就有点难受了，根据reply的不同，write的方式也是不一样的
 		reply, err := ConvertConnToRequest(conn)
+		//少了一步逻辑，应该是得到request，然后根据request做逻辑处理
 		if err != nil {
 			conn.Write([]byte("-ERROR " + err.Error() + "\r\n"))
 			//conn.Close()
@@ -111,6 +112,9 @@ func readArgument(reader *bufio.Reader) ([]byte, error) {
 	//我的目的自然是如果是b是\r或者是\n的时候放过去
 	//但是这一行判断出来，不管b是什么都会阻断
 	//\r\n之外的阻断，怎么实现？？
+	//把b不等于的判断条件翻译一下，变成b等于，就容易理解多了
+	//比如说，b不等于并且b不等于就相当于，b等于两者之外的数值呗
+	//我在想高数，线代，概率论里面还有别的技巧能走出逻辑迷宫吗？
 	if b, err := reader.ReadByte(); err != nil || (b != '\r' && b != '\n') {
 		log.Println("what is b why miss crlf", b, '\n', "is", byte('\n'), byte('\r'))
 		return nil, errors.New("缺少CRLF")

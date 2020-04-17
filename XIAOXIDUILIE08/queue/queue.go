@@ -1,6 +1,9 @@
 package queue
 
-import "log"
+import (
+	"log"
+	"time"
+)
 
 /**
 map的key是topic，value是channel
@@ -53,6 +56,7 @@ func (t *TopicPool) SubPool(topic string, queueName string) *string {
 		queue.QueueMap[queueName] = make(chan *string)
 		q = queue.QueueMap[queueName]
 	}
+	time.Sleep(time.Second * 10)
 	return <-q
 }
 func (t *TopicPool) Bind(topic string, queueName string) {
