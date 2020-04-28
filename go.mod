@@ -10,7 +10,7 @@ require (
 	github.com/gorilla/websocket v1.4.2
 	github.com/jinzhu/gorm v1.9.12
 	github.com/prometheus/client_golang v1.5.1
-	github.com/prometheus/common v0.9.1
 	github.com/stretchr/testify v1.5.1 // indirect
+	golang.org/x/net v0.0.0-20190613194153-d28f0bde5980
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 )
