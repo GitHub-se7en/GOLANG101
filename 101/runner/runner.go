@@ -58,7 +58,7 @@ func (r *Runner) Start() error {
 }
 
 func (r *Runner) run() error {
-	//见过遍历变量的，但是第一次见遍历函数的
+	//见过遍历变量的，但是第一次见遍历函数的，这样的话，只能是执行函数之前判断，万一我在函数执行过程中取消了呢？
 	for id, task := range r.tasks {
 		if r.gotInterrupt() {
 			return ErrorInterrupt
