@@ -6,6 +6,9 @@ import (
 )
 
 func main() {
+
+}
+func ad() {
 	stringChannel := make(chan string, 1)
 	go func() {
 		time.Sleep(time.Second)
