@@ -9,6 +9,7 @@ require (
 	github.com/goinaction/code v0.0.0-20171020164608-49fc99e6affb
 	github.com/gorilla/websocket v1.4.2
 	github.com/jinzhu/gorm v1.9.12
+	github.com/klauspost/cpuid v1.2.4
 	github.com/prometheus/client_golang v1.5.1
 	github.com/stretchr/testify v1.5.1 // indirect
 	golang.org/x/net v0.0.0-20190613194153-d28f0bde5980
