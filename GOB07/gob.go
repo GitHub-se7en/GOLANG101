@@ -23,6 +23,8 @@ func store(data interface{}, filename string) {
 	if err != nil {
 		panic(err)
 	}
+	log.Println(data)
+	log.Println(string(buffer.Bytes()))
 	err = ioutil.WriteFile(filename, buffer.Bytes(), 0600)
 	if err != nil {
 		panic(err)
