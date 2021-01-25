@@ -12,5 +12,5 @@ func main() {
 		}
 		log.Println("我是defer")
 	}()
-	panic("我是panic")
+	//panic("我是panic")
 }

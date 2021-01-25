@@ -14,7 +14,7 @@ var (
 
 func work(ctx context.Context) error {
 	defer wg.Done()
-
+	//这个并不是同时启动1000个，这个是执行第一个的时候就卡在那等待了
 	for i := 0; i < 1000; i++ {
 		select {
 		case <-time.After(2 * time.Second):
